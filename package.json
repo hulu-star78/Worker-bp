@@ -8,7 +8,11 @@
 	"scripts": {
 		"check": "tsc --noEmit",
 		"build": "node scripts/build.js",
-		"build-dev": "node scripts/build-dev.js"
+		"build-dev": "node scripts/build-dev.js",
+		"deploy": "npm run build && wrangler deploy",
+		"dev": "npm run build && wrangler dev",
+		"pages:build": "npm run build && node scripts/build-pages.js",
+		"pages:deploy": "npm run pages:build && wrangler pages deploy dist-pages --project-name bpb-worker-panel"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20260603.1",
@@ -22,7 +26,8 @@
 		"globals": "^17.6.0",
 		"html-minifier": "^4.0.0",
 		"terser": "^5.48.0",
-		"typescript": "^6.0.3"
+		"typescript": "^6.0.3",
+		"wrangler": "^4.0.0"
 	},
 	"dependencies": {
 		"jose": "^6.2.3",
