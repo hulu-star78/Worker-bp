@@ -8,7 +8,7 @@ compatibility_flags = ["nodejs_compat"]
 #   npx wrangler kv namespace create bpb_kv
 # then paste the returned id below.
 kv_namespaces = [
-  { binding = "kv", id = "${BPB_KV_ID}" }
+  { binding = "kv", id = "825adc7ba934430fbfe4a4e13e306d04" }
 ]
 
 # Optional: preset variables. You can also set these from the panel UI.
