@@ -1,0 +1,17 @@
+name = "bpb-worker-panel"
+main = "dist/worker.js"
+compatibility_date = "2025-07-01"
+compatibility_flags = ["nodejs_compat"]
+
+# KV namespace used by the panel to persist settings.
+# Create it once with:
+#   npx wrangler kv namespace create bpb_kv
+# then paste the returned id below.
+kv_namespaces = [
+  { binding = "kv", id = "REPLACE_WITH_YOUR_KV_ID" }
+]
+
+# Optional: preset variables. You can also set these from the panel UI.
+# [vars]
+# UUID = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+# TR_PASS = "your-trojan-password"
